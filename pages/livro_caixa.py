@@ -51,14 +51,15 @@ if df.empty:
 else:
     df = df.reset_index(drop=True)
     header_cols = st.columns([4, 2, 2, 2, 2, 2, 3, 1])
-    headers = ["Nome", "CPF", "Tipo", "Forma Pgto", "Valor", "Data", "Email", ""]
+    headers = ["Nome", "CPF", "Tipo", "Forma Pgto", "Valor", "Data", "Email"]
+
     for col, name in zip(header_cols, headers):
         col.markdown(f"**{name}**")
 
     for i, row in df.iterrows():
         cols = st.columns([4, 2, 2, 2, 2, 2, 3, 1])
         cols[0].markdown(row["Nome"])
-        cols[1].markdown(formatar_cpf(row["CPF"]))
+        cols[1].markdown(row["CPF"])
         cols[2].markdown(row["Operacao"])
         cols[3].markdown(row["Forma de Pagamento"])
         cols[4].markdown(f"R$ {row['Valor']:.2f}")
