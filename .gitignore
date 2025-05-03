@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual env
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# MacOS / Windows
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Arquivos de credenciais
+credentials.json
+token.json
